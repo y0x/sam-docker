@@ -2,7 +2,18 @@
 
 This repository allows to easily setup a local dynamoDB that is preconfigured to be easily used with AWS-SAM for local testing.
 
+## Docker usage
+
+Start linked services:
+
+`docker-compose up`
+
+Stop services:
+
+`docker-compose down`
+
 ## Table usage
+
 create-table.json contains basic table structure and can be adjusted to your needs. Create a table by executing:
 
 `aws dynamodb create-table --cli-input-json file://json/create-table.json --endpoint-url http://localhost:8000`
