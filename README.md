@@ -22,3 +22,20 @@ Scan Table
 Delete Table
 
 `aws dynamodb delete-table --table-name ExampleTable --endpoint-url http://localhost:8000`
+
+## AWS SAM usage
+
+Following steps require basic sam infrastructure. Can be created with `sam init`.
+
+Start local api
+
+`sam local start-api --env-vars json/env.json`
+
+Create your DynamoDBClient with the following configuration
+
+```
+region: 'eu-central-1' #Must match the value from json/env.json
+endpoint: 'http://dynamo:8000'
+```
+
+As TableName use the value from json/env.json (This must match the value from json/create-table.json)
