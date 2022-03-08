@@ -2,6 +2,10 @@
 
 This repository allows to easily setup a local dynamoDB that is preconfigured to be easily used with AWS-SAM for local testing.
 
+Currently supported services by this repository:
+
+- DynamoDB
+
 ## Docker usage
 
 Start linked services:
